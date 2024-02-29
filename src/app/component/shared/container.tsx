@@ -8,7 +8,7 @@ export interface ContainerProps {
 function Container({ className, children }: ContainerProps) {
   return (
     <section className={cn("mx-auto container-main px-6 lg:px-8", className)}>
-      <div className="mx-auto ">{children}</div>
+      {children}
     </section>
   );
 }

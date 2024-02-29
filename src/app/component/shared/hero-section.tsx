@@ -5,7 +5,7 @@ import Container from "./container";
 const HeroSection = () => {
   return (
     <Container>
-      <FadeIn className="max-w-6xl">
+      <FadeIn className="max-w-6xl mt-8">
         <h1 className="  text-5xl text font-medium tracking-tight text-neutral-800 [text-wrap:balance] sm:text-6xl sm:leading-snug">
           Transforming
           <b className="text-neutral-950"> spaces</b>
