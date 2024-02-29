@@ -1,12 +1,6 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/app/component/shared/navbar";
-import Footer from "@/app/component/shared/footer";
-import { GridPattern } from "./component/shared/GridPattern";
 import { RootLayout } from "./component/shared/RootLayout";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,7 +12,7 @@ export default function Layout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className="satoshi-variable">
         <RootLayout>{children}</RootLayout>
       </body>
     </html>

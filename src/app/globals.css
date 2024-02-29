@@ -1,7 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import url("../WEB/css/satoshi.css");
+html {
+  scroll-behavior: smooth;
+}
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -67,6 +70,55 @@
 }
 
 @layer components {
+  /* Define classes for each font family */
+.satoshi-variable {
+  font-family: 'Satoshi-Variable', sans-serif;
+}
+
+.satoshi-variable-italic {
+  font-family: 'Satoshi-VariableItalic', sans-serif;
+}
+
+.satoshi-light {
+  font-family: 'Satoshi-Light', sans-serif;
+}
+
+.satoshi-light-italic {
+  font-family: 'Satoshi-LightItalic', sans-serif;
+}
+
+.satoshi-regular {
+  font-family: 'Satoshi-Regular', sans-serif;
+}
+
+.satoshi-italic {
+  font-family: 'Satoshi-Italic', sans-serif;
+}
+
+.satoshi-medium {
+  font-family: 'Satoshi-Medium', sans-serif;
+}
+
+.satoshi-medium-italic {
+  font-family: 'Satoshi-MediumItalic', sans-serif;
+}
+
+.satoshi-bold {
+  font-family: 'Satoshi-Bold', sans-serif;
+}
+
+.satoshi-bold-italic {
+  font-family: 'Satoshi-BoldItalic', sans-serif;
+}
+
+.satoshi-black {
+  font-family: 'Satoshi-Black', sans-serif;
+}
+
+.satoshi-black-italic {
+  font-family: 'Satoshi-BlackItalic', sans-serif;
+}
+
   .bg-background {
     background-color: hsl(var(--background));
   }
@@ -76,9 +128,10 @@
   .border-border {
     border-color: hsl(var(--border));
   }
-  .grid-container{
+  .grid-container {
     @apply grid lg:grid-cols-12 sm:grid-cols-8 grid-cols-4 gap-4;
-  } .container-main {
+  }
+  .container-main {
     @apply max-w-[80rem] mx-auto px-4;
   }
 }

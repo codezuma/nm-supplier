@@ -33,7 +33,6 @@ export const DirectionAwareCard = ({
     if (!ref.current) return;
 
     const direction = getDirection(event, ref.current);
-    console.log("direction", direction);
     switch (direction) {
       case 0:
         setDirection("top");
@@ -69,7 +68,7 @@ export const DirectionAwareCard = ({
       onMouseEnter={handleMouseEnter}
       ref={ref}
       className={cn(
-        " bg-transparent rounded-lg overflow-hidden group/card relative",
+        " bg-transparent  overflow-hidden group/card relative",
         className
       )}
     >
@@ -81,7 +80,7 @@ export const DirectionAwareCard = ({
             whileHover={direction}
             exit="exit"
           >
-            <motion.div className="group-hover/card:block hidden absolute inset-0 w-full h-full bg-black/40 z-10 transition duration-500" />
+            <motion.div className=" absolute inset-0 w-full h-full bg-black/40 z-10 transition duration-500" />
             <motion.div
               variants={variants}
               className="h-full w-full relative bg-gray-50 dark:bg-black"
@@ -102,7 +101,6 @@ export const DirectionAwareCard = ({
               />
             </motion.div>
             <motion.div
-              variants={textVariants}
               transition={{
                 duration: 0.5,
                 ease: "easeOut",
@@ -141,34 +139,5 @@ const variants = {
   },
   right: {
     x: -20,
-  },
-};
-
-const textVariants = {
-  initial: {
-    y: 0,
-    x: 0,
-    opacity: 0,
-  },
-  exit: {
-    y: 0,
-    x: 0,
-    opacity: 0,
-  },
-  top: {
-    y: -20,
-    opacity: 1,
-  },
-  bottom: {
-    y: 2,
-    opacity: 1,
-  },
-  left: {
-    x: -2,
-    opacity: 1,
-  },
-  right: {
-    x: 20,
-    opacity: 1,
   },
 };

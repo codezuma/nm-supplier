@@ -11,11 +11,16 @@ const CategoryGridSection = () => {
           Our Categories
         </h2>
       </header>
-      <div className="grid-container ">
+      <div className="grid md:grid-cols-3 grid-cols-1  gap-4 ">
         {categories.map((category, index) => {
           return (
             <DirectionAwareCard
-              className={cn("h-96 border", gridClasses(index))}
+              className={cn(
+                "h-96 border",
+                index === 3 || index === 6 || index === 10 || index === 13
+                  ? "md:col-span-2"
+                  : ""
+              )}
               imageUrl={category.imageUrl}
               key={index}
             >
@@ -44,26 +49,18 @@ const gridClasses = (index: number) => {
   const evenSequence = [
     "lg:col-span-8 sm:col-span-5 col-span-4",
     "lg:col-span-4 sm:col-span-3 col-span-4",
+    "lg:col-span-4 sm:col-span-5 col-span-4",
     "lg:col-span-8 sm:col-span-5 col-span-4",
     "lg:col-span-4 sm:col-span-3 col-span-4",
-    "lg:col-span-8 sm:col-span-5 col-span-4",
-    "lg:col-span-4 sm:col-span-3 col-span-4",
-    "lg:col-span-8 sm:col-span-5 col-span-4",
-    "lg:col-span-4 sm:col-span-3 col-span-4",
-    "lg:col-span-8 sm:col-span-5 col-span-4",
-    "lg:col-span-4 sm:col-span-3 col-span-4",
+    "lg:col-span-4 sm:col-span-5 col-span-4",
   ];
   const oddSequence = [
-    "lg:col-span-4 sm:col-span-3 col-span-4",
     "lg:col-span-8 sm:col-span-5 col-span-4",
     "lg:col-span-4 sm:col-span-3 col-span-4",
+    "lg:col-span-4 sm:col-span-5 col-span-4",
     "lg:col-span-8 sm:col-span-5 col-span-4",
     "lg:col-span-4 sm:col-span-3 col-span-4",
-    "lg:col-span-8 sm:col-span-5 col-span-4",
-    "lg:col-span-4 sm:col-span-3 col-span-4",
-    "lg:col-span-8 sm:col-span-5 col-span-4",
-    "lg:col-span-4 sm:col-span-3 col-span-4",
-    "lg:col-span-8 sm:col-span-5 col-span-4",
+    "lg:col-span-4 sm:col-span-5 col-span-4",
   ];
 
   const sequenceLength = Math.max(evenSequence.length, oddSequence.length);
