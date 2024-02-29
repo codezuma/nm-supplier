@@ -95,7 +95,7 @@ export const Testimonials = ({
         >
           {items.map((item, idx) => (
             <li
-              className="w-[350px] max-w-full relative b border  flex-shrink-0 border-slate-300 bg-white px-8 py-6 md:w-[450px]"
+              className="w-[350px] max-w-full relative min-h-60 border  flex-shrink-0 border-slate-300 bg-white px-8 py-6 md:w-[450px]"
               key={item.name}
             >
               <blockquote>
@@ -106,7 +106,14 @@ export const Testimonials = ({
                 <span className=" relative z-20 text-sm leading-[1.6] text-gray-700 font-normal">
                   {item.quote}
                 </span>
-                <div className="relative z-20 mt-6 flex flex-row items-center">
+                <div className="z-20 bottom-3 absolute flex flex-row items-center">
+                  <img
+                    src={`https://randomuser.me/api/portraits/men/${
+                      idx + 1
+                    }.jpg`}
+                    className="w-12 h-12 mr-4 rounded-full"
+                    alt="Image"
+                  />
                   <span className="flex flex-col gap-1">
                     <span className=" text-sm font-bold leading-[1.6] text-gray-800 ">
                       {item.name}
