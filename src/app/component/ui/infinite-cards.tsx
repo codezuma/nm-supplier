@@ -114,11 +114,11 @@ export const Testimonials = ({
                     className="w-12 h-12 mr-4 rounded-full"
                     alt="Image"
                   />
-                  <span className="flex flex-col gap-1">
+                  <span className="flex flex-col ">
                     <span className=" text-sm font-bold leading-[1.6] text-gray-800 ">
                       {item.name}
                     </span>
-                    <span className=" text-sm leading-[1.6] text-gray-950 font-semibold">
+                    <span className=" text-xs  text-gray-950 font-semibold">
                       {item.title}
                     </span>
                   </span>

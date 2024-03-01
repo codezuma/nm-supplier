@@ -1,3 +1,4 @@
+import FadeIn from "../shared/FadeIn";
 import Container from "../shared/container";
 const relatedProducts = [
   {
@@ -49,6 +50,7 @@ const relatedProducts = [
 const RelatedProducts = () => {
   return (
     <Container className="mt-20">
+      <FadeIn>
       <div className="flex items-center justify-between space-x-4">
         <h2 className="text-xl font-semibold md:text-3xl md:leading-tight text-gray-950 dark:text-white">
           Related Products
@@ -61,6 +63,8 @@ const RelatedProducts = () => {
           <span aria-hidden="true"> &rarr;</span>
         </a>
       </div>
+      </FadeIn>
+
       <div className="mt-6 grid grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-4">
         {relatedProducts.map((product) => (
           <div key={product.id} className="group relative">

@@ -4,6 +4,7 @@ import CategoryGridSection from "./component/home-page/category-grid";
 import { Newsletter } from "./component/newsletter";
 import { Testimonials } from "./component/ui/infinite-cards";
 import { Skeleton } from "@/components/ui/skeleton";
+import CategorySlides from "@/app/component/home-page/category-slides";
 
 const items = [
   {
@@ -40,6 +41,7 @@ export default function Home() {
   return (
     <>
       <HeroSection />
+      <CategorySlides/>
       <CategoryGridSection />
       <Testimonials items={items} />
       <Newsletter />

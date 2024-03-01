@@ -14,6 +14,7 @@ const CategoryGridSection = () => {
       <div className="grid md:grid-cols-3 grid-cols-1  gap-4 ">
         {categories.map((category, index) => {
           return (
+            
             <DirectionAwareCard
               className={cn(
                 "h-96 border",
